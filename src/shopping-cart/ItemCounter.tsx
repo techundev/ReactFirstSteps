@@ -6,6 +6,11 @@ interface Item {
 }
 
 export const ItemCounter = ({ name, quantity }: Item) => {
+
+    const handleClick = () => {
+        console.log(`Click ${name}`);
+    }
+
     return (
         <section
             style={{
@@ -16,7 +21,7 @@ export const ItemCounter = ({ name, quantity }: Item) => {
             }}
         >
             <span style={{ width: 150 }}>{name}</span>
-            <button>+1</button>
+            <button onClick={handleClick}>+1</button>
             <span>{quantity}</span>
             <button>-1</button>
         </section>
